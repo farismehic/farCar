@@ -5,16 +5,16 @@
                 <h3 class="text-lg">Login to shop</h3>
             </div>
             <div class="flex flex-col">
-                <label for="email" class="text-sm">Email:</label>
-                <input type="email" class="rounded-md">
+                <x-form-label for="email">Email</x-form-label>
+                <input type="email" class="rounded-md py-1 outline-slate-500 px-2" placeholder="type your email">
             </div>
             <div class="flex flex-col">
-                <label for="password" class="text-sm">Password</label>
-                <input type="password" class="rounded-md">
+                <x-form-label for="password">Password</x-form-label>
+                <input type="password" class="rounded-md py-1 outline-slate-500 px-2" placeholder="type your password">
             </div>
             
             <div class="flex justify-center">
-                <x-submit-button>Login</x-submit-button>
+                <x-primary-button>Login</x-primary-button>
             </div>
         </div>
     </div>
