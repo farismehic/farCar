@@ -3,6 +3,13 @@
     <a class="{{ request()->is('login') ? 'text-teal-400' : 'text-slate-800 hover:font-medium' }}" aria-current="{{ request()->is('login') ? 'page' : 'false' }}" href="/login">Login</a>
     <a class="{{ request()->is('register') ? 'text-teal-400' : 'text-slate-800 hover:font-medium' }}" aria-current="{{ request()->is('register') ? 'page' : 'false' }}" href="/register">Register</a>
     @endguest
+    @auth
+    <span class="text-lg">Hi, {{ auth()->user()->name }}</span>
+    <form method="POST" action="/logout" class="text-slate-800 hover:font-medium">
+        @csrf
+        <button>Log Out</button> 
+    </form>
+    @endauth
 </div>
 <nav class="w-full bg-violet-700 h-20 px-5 text-white">
     <div class="flex justify-between">

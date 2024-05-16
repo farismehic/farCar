@@ -19,22 +19,21 @@ Route::prefix('cars')->group(function () {
     Route::get('/{id}', [CarController::class, 'show'])->name('cars.show'); 
     Route::get('/{id}/edit', [CarController::class, 'edit'])->name('cars.edit');
     Route::patch('/{id}', [CarController::class, 'update'])->name('cars.update'); 
-
     Route::delete('/{id}', [CarController::class, 'destroy'])->name('cars.delete'); 
     });
    
 //USERS SECTION
-Route::prefix('admin')->group(function () {
-    Route::prefix('users')->group(function () {
-        Route::get('/', [UserController::class, 'index']);
-        Route::get('/create', [UserController::class, 'create']);
-        Route::get('/edit/{id}', [UserController::class, 'edit']);
-        Route::get('/delete/{id}', [UserController::class, 'delete']);
-    });
+Route::get('/register', [UserController::class, 'create']);
+Route::post('/register', [UserController::class, 'store']);
+Route::prefix('users')->group(function () {
+    Route::get('/', [UserController::class, 'index']);
+    Route::get('/create', [UserController::class, 'create']);
+    Route::get('/{id}/edit', [UserController::class, 'edit']);
+    Route::patch('/{id}', [UserController::class, 'update']);
+    Route::delete('/{id}', [UserController::class, 'destroy']);
 });
 
-
-Route::get('/register', [UserController::class, 'create']);
-Route::post('/register', [UserController::class, 'store']); 
-
-Route::get('/login', [SessionController::class, 'login']);
+//LOGIN SESSION SECTION
+Route::get('/login', [SessionController::class, 'create']);
+Route::post('/login', [SessionController::class, 'store']);
+Route::post('/logout', [SessionController::class, 'destroy']);

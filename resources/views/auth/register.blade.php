@@ -8,7 +8,7 @@
             </div>
             <div class="flex flex-col">
                 <x-form-label for="name">Name</x-form-label>
-                <input type="text" class="rounded-md py-1 outline-slate-500 px-2" placeholder="John Doe" required>
+                <input name="name" type="text" class="rounded-md py-1 outline-slate-500 px-2" placeholder="John Doe" required>
                 @error('name')
                     <p class="text-xs text-red-500 font-semibold mt-1">{{ $message }}</p>
                 @enderror
@@ -34,14 +34,14 @@
                     <p class="text-xs text-red-500 font-semibold mt-1">{{ $message }}</p>
                 @enderror
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mb-5">
                 <x-form-label for="password_confirmation">Confirm Password</x-form-label>
                 <input name="password_confirmation" type="password" class="rounded-md py-1 outline-slate-500 px-2" required>
                 @error('password_confirmation')
-                    <p class="text-xs text-red-500 font-semibold mt-1">{{ $message }}</p>
+                    <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
                 @enderror
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center pt-5">
                 <x-primary-button>Register</x-primary-button>
             </div>
         </form>

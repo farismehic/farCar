@@ -18,20 +18,55 @@ class UserController extends Controller
 
     }
 
-    public function store(Request $request) {
+    public function store() {
 
-        $data = $request->validate([
+        $validatedUserData = request()->validate([
             'name' => ['required', 'string'],
             'email' => ['required', 'email'],
             'phone' => ['required', 'string'],
-            'password' => ['required', 'confirmed', Password::min(5)]
+            'password' => ['required', Password::min(5)]
 
         ]);
 
-    
-        $user = User::create($data);
+        $user = User::create($validatedUserData);
+
+
         Auth::login($user);
 
         return redirect('/cars');
+    }
+
+    public function index() {
+        $users = User::all();
+        return view('auth.dashboard', compact('users'));
+    }
+
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+        return view('auth.edit-user', ['user' => $user]);
+
+    }
+
+    public function update(User $user, $id)
+    {
+        $validatedUserData = request()->validate([
+            'name' => ['required', 'string'],
+            'email' => ['required', 'email'],
+            'phone' => ['required', 'string'],
+
+        ]);
+
+
+        $user = User::findOrFail($id);
+
+        $user->update($validatedUserData);
+        return redirect('/users');
+    }
+
+    public function destroy(User $user, $id)
+    {
+        $user = User::findOrFail($id)->delete();
+        return redirect('/users');
     }
 }

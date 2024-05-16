@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex justify-center mt-5 ">
-        <form method="POST" action="/cars/{{ $car->id }}" class="flex flex-col w-1/2 bg-slate-200 px-10 py-10 rounded-md space-y-2 shadow-lg">
+        <form method="POST" action="/cars/{{ $car->id }}" enctype="multipart/form-data" class="flex flex-col w-1/2 bg-slate-200 px-10 py-10 rounded-md space-y-2 shadow-lg">
             @csrf
             @method('PATCH')
             <div class="mb-4 my-4 border-b-4 border-slate-500 m-auto">

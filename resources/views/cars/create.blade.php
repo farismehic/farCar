@@ -1,7 +1,7 @@
 
 <x-layout>
     <div class="flex justify-center mt-5 ">
-        <form method="POST" action="{{ route('cars.store') }}" class="flex flex-col w-1/2 bg-slate-200 px-10 py-10 rounded-md space-y-2 shadow-lg">
+        <form method="POST" action="{{ route('cars.store') }}" enctype="multipart/form-data" class="flex flex-col w-1/2 bg-slate-200 px-10 py-10 rounded-md space-y-2 shadow-lg">
             @csrf
             <div class="mb-4 my-4 border-b-4 border-slate-500 m-auto">
                 <h3 class="text-lg">Create a car add</h3>

@@ -19,31 +19,30 @@
     </head>
     <body class="mx-auto my-auto bg-slate-100 mt-3">
         <x-navigation></x-navigation>
+
         @auth
-        <div class="bg-slate-500">
+        @if(auth()->user()->is_admin)
+        <div class="bg-slate-400">
             <div class="flex justify-end items-center mx-5 py-3">
                 <div class="flex justify-end w-1/6 hover:scale-105 transition ease-in-out duration-500">
-                    <a href="/" class="flex justify-center w-full p-auto rounded-md w-2/5 border border-2 shadow-md border-teal-400 mr-2 text-white">
+                    <a href="/users" class="flex justify-center w-full p-auto rounded-md w-2/5 shadow-md bg-teal-400 mr-2 text-white">
                         Dashboard
                     </a>
                 </div>
                 <div class="flex justify-end w-1/6 hover:scale-105 transition ease-in-out duration-500">
-                    <a href="{{ route('cars.create') }}" class="flex justify-center w-full p-auto rounded-md shadow-md w-2/5 border border-2 border-teal-400 text-white">
+                    <a href="{{ route('cars.create') }}" class="flex justify-center w-full p-auto rounded-md shadow-md w-2/5 bg-teal-400 text-white">
                         Create a car
                     </a>
-
                 </div>
             </div>
         </div>
+        @endif
         @endauth
         <div class="mx-5">
             
-
             {{ $slot }}
 
         </div>
-        
-       
     </body>
     <x-footer></x-footer>
 </html>

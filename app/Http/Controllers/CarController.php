@@ -39,12 +39,9 @@ class CarController extends Controller
             'photo' => ['nullable', 'image']
         ]);
     
-        // Handle file upload if photo is present
-        if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('photos');
-            $data['photo'] = $photoPath;
+        if (request()->hasFile('photo')) {
+            $data['photo'] = request()->file('photo')->store('photos');
         }
-    
         Car::create($data);
     
         return redirect('/cars');
@@ -59,7 +56,7 @@ class CarController extends Controller
 
     public function update(Car $car, $id)
     {
-        request()->validate([
+        $data = request()->validate([
             'car_model' => ['required', 'string'],
             'type' => ['nullable', 'string'],
             'miles' => ['required', 'numeric'],
@@ -75,20 +72,12 @@ class CarController extends Controller
 
         $car = Car::findOrFail($id);
 
-        $car->update([
-            'car_model' => request('car_model'),
-            'type' => request('type'),
-            'miles' => request('miles'),
-            'fuel' => request('fuel'),
-            'transmission' => request('transmission'),
-            'exterior' => request('exterior'),
-            'interior' => request('interior'),
-            'engine' => request('engine'),
-            'features' => request('features'),
-            'price' => request('price'),
-            'photo' => request('photo'),
-        ]);
+        if (request()->hasFile('photo')) {
+            $photoPath = request()->file('photo')->store('photos', 'public');
+            $data['photo'] = $photoPath;
+        }
 
+        $car->update($data);
         return redirect('/cars');
     }
 
