@@ -37,12 +37,19 @@ Kada su korisnici prijavljeni kao administratori, imaju mogućnost uređivanja i
 ![FarCar admin logon dashboard users](https://github.com/farismehic/farCar/assets/166952778/63e6694f-3d03-4957-b2dd-e16c5e13cc05)
 
 <p>Edit User:</p>
+
 ![FarCar admin logon edit user](https://github.com/farismehic/farCar/assets/166952778/8fece287-277a-4871-a10b-6241a3fb09b2)
+
 <p>Create Car:</p>
+
 ![FarCar admin logon create car](https://github.com/farismehic/farCar/assets/166952778/72dcfbf9-c915-4014-81fd-d19b46d78392)
+
 <p>Show Car:</p>
+
 ![FarCar admin logon show car](https://github.com/farismehic/farCar/assets/166952778/78d5d692-7ff1-42a7-8c79-d4a1c9b9492a)
+
 <p>Edit Car:</p>
+
 ![FarCar admin logon edit car](https://github.com/farismehic/farCar/assets/166952778/fc5531b9-81ca-4caf-ac90-e99cdbaf15ca)
 
 
