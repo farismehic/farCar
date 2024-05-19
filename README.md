@@ -14,13 +14,13 @@ Prikaz automobila za registrovanog usera
 ![FarCar user logon show car](https://github.com/farismehic/farCar/assets/166952778/57697aaf-4d8d-476e-899e-98c64d85f8cb)
 
 Prikaz web aplikacije za admin usera
-![FarCar admin logon create car](https://github.com/farismehic/farCar/assets/166952778/72dcfbf9-c915-4014-81fd-d19b46d78392)
-![FarCar admin logon dashboard users](https://github.com/farismehic/farCar/assets/166952778/63e6694f-3d03-4957-b2dd-e16c5e13cc05)
-![FarCar admin logon edit car](https://github.com/farismehic/farCar/assets/166952778/fc5531b9-81ca-4caf-ac90-e99cdbaf15ca)
-![FarCar admin logon edit user](https://github.com/farismehic/farCar/assets/166952778/d4a7fbf6-49
-![FarCar admin logon show car](https://github.com/farismehic/farCar/assets/166952778/78d5d692-7ff1-42a7-8c79-d4a1c9b9492a)
-7a-4e73-9046-62ea213e4a6d)
 ![FarCar admin logon](https://github.com/farismehic/farCar/assets/166952778/79a7f683-37cf-4109-b759-daf4564419f3)
+![FarCar admin logon dashboard users](https://github.com/farismehic/farCar/assets/166952778/63e6694f-3d03-4957-b2dd-e16c5e13cc05)
+![FarCar admin logon edit user](https://github.com/farismehic/farCar/assets/166952778/d4a7fbf6-49
+![FarCar admin logon create car](https://github.com/farismehic/farCar/assets/166952778/72dcfbf9-c915-4014-81fd-d19b46d78392)
+![FarCar admin logon show car](https://github.com/farismehic/farCar/assets/166952778/78d5d692-7ff1-42a7-8c79-d4a1c9b9492a)
+![FarCar admin logon edit car](https://github.com/farismehic/farCar/assets/166952778/fc5531b9-81ca-4caf-ac90-e99cdbaf15ca)
+
 
 
 
