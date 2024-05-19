@@ -6,7 +6,7 @@
             @method('PATCH')
 
             <div class="mb-4 my-4 border-b-4 border-slate-500 m-auto">
-                <h3 class="text-lg">Create your account</h3>
+                <h3 class="text-lg">Edit user</h3>
             </div>
             <div class="flex flex-col">
                 <x-form-label for="name">Name</x-form-label>
