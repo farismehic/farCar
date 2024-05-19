@@ -76,7 +76,7 @@
                     <!--Price -->
                     <div class="flex flex-col">
                         <x-form-label for="price">Price</x-form-label>
-                        <input name="price" type="text" class="rounded-md py-1 outline-slate-500 px-2" placeholder="20,000.00 BAM">
+                        <input name="price" type="text" class="rounded-md py-1 outline-slate-500 px-2" placeholder="20,000.00">
                     </div>
                 </div>
             </div>

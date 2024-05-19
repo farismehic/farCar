@@ -25,6 +25,7 @@
                 <!-- Delete Car Form -->
                 <div class="flex justify-start mt-5">
                     @auth 
+                    @if(auth()->user()->is_admin)
                     <a href="/cars/{{ $car->id }}/edit" class="rounded-md bg-blue-500 hover:bg-blue-700 text-white p-1">Edit</a>
 
                     <form action="/cars/{{ $car->id }}" method="POST" class="rounded-md bg-red-500 hover:bg-red-700 text-white p-1 ml-2 mr-2">
@@ -32,7 +33,7 @@
                         @method('DELETE')
                         <button type="submit">Delete</button>
                     </form>
-                    
+                    @endif
                     <a href="/" class="rounded-md bg-slate-500 hover:bg-slate-700 text-white p-1">
                         Arrange Test Ride
                     </a>
